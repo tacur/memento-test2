@@ -34,7 +34,8 @@ General Style
   width: 100%;
   /* vertically align its content */
   display: table;
-  background: #2e416a;
+  /* background: #2e416a; */
+  background: url(../img/start1.png) no-repeat center center;
   overflow: hidden;
 }
 
@@ -44,7 +45,8 @@ General Style
   vertical-align: middle;
   text-align: center;
   padding: 0 5%;
-  background: #2e416a;
+  /* background: #2e416a; */
+  background: url(../img/start1.png) no-repeat center center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
