@@ -147,7 +147,7 @@ main .cd-main-content::after {
 main .cd-main-content.cd-index {
   /* .cd-main-content basic style - index page */
   /* background-color: #4089a6; */
-  background: url(../img/start.png);
+  background: url(../img/start2.png) no-repeat center center;
   /* vertically center its content */
   display: table;
   width: 100%;
