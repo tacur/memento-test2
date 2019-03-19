@@ -34,8 +34,7 @@ General Style
   width: 100%;
   /* vertically align its content */
   display: table;
-  /* background: #2e416a; */
-  background: url(../img/start1.png) no-repeat center center;
+  background: #2e416a;
   overflow: hidden;
 }
 
@@ -45,10 +44,12 @@ General Style
   vertical-align: middle;
   text-align: center;
   padding: 0 5%;
-  /* background: #2e416a; */
-  background: url(../img/start1.png) no-repeat center center;
+  /*  background: #2e416a; */
+  background: url(../img/memento2.jpg) no-repeat center center ; 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  max-width: 100%;
+  height: auto;
 }
 .cd-intro-content h1 {
   font-size: 2.4rem;
