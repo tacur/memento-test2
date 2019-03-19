@@ -23,6 +23,7 @@ a {
   text-decoration: none;
 }
 
+
 /* -------------------------------- 
 
 Patterns - reusable parts of our design
@@ -783,4 +784,25 @@ JavaScript Disabled
 }
 .no-js .cd-primary-nav li:not(.cd-label) {
   display: inline-block;
+}
+
+.btn-modal {
+
+  display: inline-block;
+  padding: .4em 1em;
+  border-radius: 4px;
+  -webkit-transition: background 0.2s;
+  -moz-transition: background 0.2s;
+  transition: background 0.2s;
+  color: #ffffff;
+  font-family: "Merriweather", serif;
+  font-size: 3rem;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+.btn-modal:hover {
+  background-color: #a8ae7e;
 }
