@@ -88,11 +88,10 @@ General Style
   display: inline-block;
   padding: 1.2em 1.4em;
   font-size: 1.3rem;
-  color: #ffffff;
+  color: white;
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 1px;
-  background-color: #202e4a;
   border-radius: .25em;
   margin-right: 1.5em;
 }
@@ -100,7 +99,16 @@ General Style
   margin-right: 0;
 }
 .cd-btn.main-action {
-  background-color: #fb5e58;
+background-color: black;
+color: #d4af37;
+}
+.cd-btn.main-action:hover{
+  background-color: #d4af37;
+  color: black;
+}
+.cd-btn:hover{
+  background-color: white;
+  color: black;
 }
 @media only screen and (min-width: 480px) {
   .cd-btn {
