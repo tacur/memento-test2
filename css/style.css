@@ -807,3 +807,637 @@ JavaScript Disabled
 .btn-modal:hover {
   background-color: #d4af37;
 }
+
+.modal-title{
+  text-align: right;
+  font-family: "Merriweather", serif;
+  font-size: 16px;
+  color: white; 
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+/* -------------------------------- 
+
+Main Components 
+
+-------------------------------- */
+.cd-svg-clipped-slider {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 4em auto;
+}
+.cd-svg-clipped-slider .gallery-wrapper,
+.cd-svg-clipped-slider .gallery,
+.cd-svg-clipped-slider .caption {
+  position: relative;
+}
+.cd-svg-clipped-slider .gallery li {
+  /* slider images */
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 25%;
+  /* (100% - width)/2 */
+  width: 50%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transform: translateX(75%) scale(0.4);
+      -ms-transform: translateX(75%) scale(0.4);
+          transform: translateX(75%) scale(0.4);
+  cursor: pointer;
+  -webkit-transition: opacity .3s, -webkit-transform .3s ease-in-out;
+  transition: opacity .3s, -webkit-transform .3s ease-in-out;
+  transition: opacity .3s, transform .3s ease-in-out;
+  transition: opacity .3s, transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+.cd-svg-clipped-slider .gallery li.selected {
+  /* slide in the center */
+  position: relative;
+  z-index: 3;
+  height: 0;
+  padding-bottom: 50%;
+  /* width(50%) * image aspect ratio (800/800) */
+  opacity: 1;
+  -webkit-transform: translateX(0) scale(1);
+      -ms-transform: translateX(0) scale(1);
+          transform: translateX(0) scale(1);
+  cursor: auto;
+}
+.cd-svg-clipped-slider .gallery li.left, .cd-svg-clipped-slider .gallery li.left-hide {
+  /* slides on the left */
+  /* .left -> slide visible on the left; .left-hide -> slides hidden on the left */
+  -webkit-transform: translateX(-75%) scale(0.4);
+      -ms-transform: translateX(-75%) scale(0.4);
+          transform: translateX(-75%) scale(0.4);
+}
+.cd-svg-clipped-slider .gallery li.left, .cd-svg-clipped-slider .gallery li.right {
+  /* .right -> slide visible on the right */
+  z-index: 2;
+  opacity: 1;
+}
+.cd-svg-clipped-slider .svg-wrapper {
+  /* using padding Hack to fix bug on IE - svg height not properly calculated */
+  height: 0;
+  padding-bottom: 100%;
+  /* image aspect ratio (800/800) * 100 */
+}
+.cd-svg-clipped-slider svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.cd-svg-clipped-slider use.cover-layer {
+  /* dark layer visible on lateral slides */
+  fill: #243238;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+  opacity: .2;
+}
+.cd-svg-clipped-slider use.cover-layer:hover {
+  opacity: 0;
+}
+.cd-svg-clipped-slider .gallery li.selected use.cover-layer {
+  opacity: 0;
+}
+.cd-svg-clipped-slider .caption {
+  margin: 1em 0;
+  overflow: hidden;
+}
+.cd-svg-clipped-slider .caption li {
+  /* slide titles */
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  -webkit-transform: translateX(100px);
+      -ms-transform: translateX(100px);
+          transform: translateX(100px);
+  opacity: 0;
+  padding: 1em 0;
+  -webkit-transition: opacity .3s, -webkit-transform .3s ease-in-out;
+  transition: opacity .3s, -webkit-transform .3s ease-in-out;
+  transition: opacity .3s, transform .3s ease-in-out;
+  transition: opacity .3s, transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+.cd-svg-clipped-slider .caption li.selected {
+  /* slide visible in the center */
+  z-index: 2;
+  position: relative;
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+.cd-svg-clipped-slider .caption li.left {
+  /* slide hidden on the left */
+  -webkit-transform: translateX(-100px);
+      -ms-transform: translateX(-100px);
+          transform: translateX(-100px);
+}
+@media only screen and (min-width: 768px) {
+  .cd-svg-clipped-slider .caption li {
+    font-size: 2.4rem;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .cd-svg-clipped-slider {
+    width: 90%;
+  }
+  .cd-svg-clipped-slider .gallery li {
+    left: 30%;
+    /* (100% - width)/2 */
+    width: 40%;
+    -webkit-transform: translateX(80%) scale(0.4);
+        -ms-transform: translateX(80%) scale(0.4);
+            transform: translateX(80%) scale(0.4);
+  }
+  .cd-svg-clipped-slider .gallery li.selected {
+    padding-bottom: 40%;
+    /* width(40%) * image aspect ratio (800/800) */
+  }
+  .cd-svg-clipped-slider .gallery li.left, .cd-svg-clipped-slider .gallery li.left-hide {
+    -webkit-transform: translateX(-80%) scale(0.4);
+        -ms-transform: translateX(-80%) scale(0.4);
+            transform: translateX(-80%) scale(0.4);
+  }
+}
+
+.cd-svg-clipped-slider .navigation a {
+  /* slider arrows */
+  position: absolute;
+  /* center arrow in the lateral preview */
+  /* left = */
+  /* 25% (.left left value) */
+  /* - 37.5% (.left translateX value converted to container percentage ( 50%(.left width) x 75% (.left translate value) /100) ) */
+  /* + 25% ( .left width (50%)/2 ) */
+  left: 12.5%;
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(0.7);
+      -ms-transform: translateX(-50%) translateY(-50%) scale(0.7);
+          transform: translateX(-50%) translateY(-50%) scale(0.7);
+  top: 50%;
+  z-index: 4;
+  pointer-events: none;
+  /* replace text with image */
+  height: 48px;
+  width: 48px;
+  color: transparent;
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: 100%;
+  -webkit-transition: opacity .3s, -webkit-transform .3s;
+  transition: opacity .3s, -webkit-transform .3s;
+  transition: transform .3s, opacity .3s;
+  transition: transform .3s, opacity .3s, -webkit-transform .3s;
+  background: url(../img/cd-icon-arrows.svg) no-repeat 0 0;
+}
+.cd-svg-clipped-slider .navigation a.next {
+  left: auto;
+  right: 12.5%;
+  -webkit-transform: translateX(50%) translateY(-50%) scale(0.7);
+      -ms-transform: translateX(50%) translateY(-50%) scale(0.7);
+          transform: translateX(50%) translateY(-50%) scale(0.7);
+  background-position: -48px 0;
+}
+.no-csspointerevents .cd-svg-clipped-slider .navigation a {
+  display: none;
+}
+@media only screen and (min-width: 1170px) {
+  .cd-svg-clipped-slider .navigation a {
+    left: 18%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+  }
+  .cd-svg-clipped-slider .navigation a.next {
+    left: auto;
+    right: 18%;
+    -webkit-transform: translateX(50%) translateY(-50%);
+        -ms-transform: translateX(50%) translateY(-50%);
+            transform: translateX(50%) translateY(-50%);
+  }
+}
+
+.cd-svg-clipped-slider.prev-hidden .navigation a.prev,
+.cd-svg-clipped-slider.next-hidden .navigation a.next {
+  /* hide prev/next arrow if first/last slide */
+  opacity: 0;
+}
+
+.cd-svg-clipped-slider .navigation a.prev.active {
+  /* scale up prev arrow on active */
+  -webkit-animation: cd-click-prev .3s;
+          animation: cd-click-prev .3s;
+}
+
+.cd-svg-clipped-slider .navigation a.next.active {
+  /* scale up next arrow on active */
+  -webkit-animation: cd-click-next .3s;
+          animation: cd-click-next .3s;
+}
+
+@-webkit-keyframes cd-click-prev {
+  0% {
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
+            transform: translateX(-50%) translateY(-50%) scale(0.8);
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+            transform: translateX(-50%) translateY(-50%) scale(1);
+  }
+}
+
+@keyframes cd-click-prev {
+  0% {
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
+            transform: translateX(-50%) translateY(-50%) scale(0.8);
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+            transform: translateX(-50%) translateY(-50%) scale(1);
+  }
+}
+@-webkit-keyframes cd-click-next {
+  0% {
+    -webkit-transform: translateX(50%) translateY(-50%) scale(0.8);
+            transform: translateX(50%) translateY(-50%) scale(0.8);
+  }
+  100% {
+    -webkit-transform: translateX(50%) translateY(-50%) scale(1);
+            transform: translateX(50%) translateY(-50%) scale(1);
+  }
+}
+@keyframes cd-click-next {
+  0% {
+    -webkit-transform: translateX(50%) translateY(-50%) scale(0.8);
+            transform: translateX(50%) translateY(-50%) scale(0.8);
+  }
+  100% {
+    -webkit-transform: translateX(50%) translateY(-50%) scale(1);
+            transform: translateX(50%) translateY(-50%) scale(1);
+  }
+}
+
+
+/* -------------------------------- 
+
+Main components 
+
+-------------------------------- */
+.cd-gallery-container {
+  margin: 2em auto;
+}
+@media only screen and (min-width: 1200px) {
+  .cd-gallery-container {
+    margin: 4em auto;
+  }
+}
+
+.cd-filter {
+  position: relative;
+  height: 40px;
+  width: 150px;
+  margin: 0 auto;
+  cursor: pointer;
+  z-index: 10;
+}
+.cd-filter::after {
+  /* small arrow icon */
+  content: '';
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("../img/icon-small-arrow.svg") no-repeat center center;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+.cd-filter ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #FFF;
+  border-radius: 0.25em;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.cd-filter li {
+  display: none;
+}
+.cd-filter li:first-child {
+  display: block;
+  /* this way the placehodler is alway visible */
+}
+.cd-filter li:last-child a {
+  border-radius: 0 0 .25em .25em;
+}
+.cd-filter a {
+  color: black;
+  display: block;
+  height: 40px;
+  width: 150px;
+  line-height: 40px;
+  padding-left: 5px;
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.cd-filter a.selected {
+  font-size: 20px;
+  background: black;
+  color: #d4af37;
+
+}
+.no-touch .cd-filter a.selected:hover {
+  background: #FFF;
+  color: #d4af37;
+}
+.cd-filter.is-open::after {
+  -webkit-transform: translateY(-50%) rotate(-180deg);
+  -moz-transform: translateY(-50%) rotate(-180deg);
+  -ms-transform: translateY(-50%) rotate(-180deg);
+  -o-transform: translateY(-50%) rotate(-180deg);
+  transform: translateY(-50%) rotate(-180deg);
+  /* small arrow rotation */
+}
+.cd-filter.is-open ul li {
+  display: block;
+}
+.cd-filter.is-open .placeholder a {
+  opacity: .4;
+  /* reduces the opacity of the placeholder on mobile when the menu is open */
+}
+@media only screen and (min-width: 768px) {
+  .cd-filter {
+    height: auto;
+    width: auto;
+  }
+  .cd-filter::after {
+    display: none;
+  }
+  .cd-filter ul {
+    background: transparent;
+    position: static;
+    box-shadow: none;
+    text-align: center;
+  }
+  .cd-filter li {
+    display: inline-block;
+    margin: 0 .4em;
+  }
+  .cd-filter li:first-child {
+    display: inline-block;
+  }
+  .cd-filter li.placeholder {
+    display: none !important;
+  }
+  .cd-filter li.placeholder a {
+    display: none;
+  }
+  .cd-filter a {
+    display: inline-block;
+    padding: 1em 2em;
+    height: auto;
+    width: auto;
+    line-height: 1;
+    border-radius: 50em !important;
+  }
+  .no-touch .cd-filter a:hover {
+    box-shadow: inset 0 0 0 2px rgba(56, 56, 56, 0.2);
+  }
+  .cd-filter a.selected:hover {
+    box-shadow: none;
+    /* removes the hover effect from the selected item */
+  }
+  .cd-filter.is-open ul li {
+    display: inline-block;
+  }
+}
+
+/* -------------------------------- 
+
+xgallery 
+
+-------------------------------- */
+.cd-gallery {
+  margin-top: 2em;
+  position: relative;
+  z-index: 5;
+}
+.cd-gallery > li {
+  position: relative;
+  margin-bottom: 1em;
+}
+.cd-gallery .cd-item-wrapper {
+  /* this is the item that rotates */
+  position: relative;
+}
+.touch .cd-gallery .cd-item-wrapper {
+  /* fix a bug on IOS8 - rotating elements dissapear*/
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  perspective: 800px;
+}
+.cd-gallery .cd-item-wrapper.is-switched .is-visible {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -webkit-animation: cd-rotate 0.5s;
+  -moz-animation: cd-rotate 0.5s;
+  animation: cd-rotate 0.5s;
+}
+.cd-gallery .cd-item-wrapper.is-switched .is-hidden {
+  -webkit-transform: rotateY(0);
+  -moz-transform: rotateY(0);
+  -ms-transform: rotateY(0);
+  -o-transform: rotateY(0);
+  transform: rotateY(0);
+  -webkit-animation: cd-rotate-inverse 0.5s;
+  -moz-animation: cd-rotate-inverse 0.5s;
+  animation: cd-rotate-inverse 0.5s;
+  opacity: 0;
+}
+.cd-gallery .cd-item-wrapper.is-switched .is-selected {
+  opacity: 1;
+}
+.cd-gallery .cd-item-wrapper > li {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 0.25em;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.cd-gallery .cd-item-wrapper > li img {
+  display: block;
+  width: 100%;
+  border-radius: 0.25em;
+}
+.cd-gallery li.is-visible {
+  /* the front item, visible by default */
+  position: relative;
+  z-index: 5;
+}
+.cd-gallery li.is-hidden {
+  /* the hidden items, right behind the front one */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.cd-gallery li.is-selected {
+  /* the next item that will be visible */
+  z-index: 3 !important;
+}
+@media only screen and (min-width: 480px) {
+  .cd-gallery > li {
+    width: 48%;
+    float: left;
+    margin-right: 4%;
+    margin-bottom: 1.2em;
+  }
+  .cd-gallery > li:nth-of-type(2n) {
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .cd-gallery > li {
+    width: 22%;
+    float: left;
+  }
+  .cd-gallery > li:nth-of-type(2n) {
+    margin-right: 4%;
+  }
+  .cd-gallery > li:nth-of-type(4n) {
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .cd-gallery {
+    margin-top: 4em;
+  }
+}
+
+/* -------------------------------- 
+
+xkeyframes 
+
+-------------------------------- */
+@-webkit-keyframes cd-rotate {
+  0% {
+    -webkit-transform: perspective(800px) rotateY(0);
+  }
+  70% {
+    -webkit-transform: perspective(800px) rotateY(200deg);
+    /* this creates the bounce effect */
+  }
+  100% {
+    -webkit-transform: perspective(800px) rotateY(180deg);
+  }
+}
+@-moz-keyframes cd-rotate {
+  0% {
+    -moz-transform: perspective(800px) rotateY(0);
+  }
+  70% {
+    -moz-transform: perspective(800px) rotateY(200deg);
+    /* this creates the bounce effect */
+  }
+  100% {
+    -moz-transform: perspective(800px) rotateY(180deg);
+  }
+}
+@keyframes cd-rotate {
+  0% {
+    -webkit-transform: perspective(800px) rotateY(0);
+    -moz-transform: perspective(800px) rotateY(0);
+    -ms-transform: perspective(800px) rotateY(0);
+    -o-transform: perspective(800px) rotateY(0);
+    transform: perspective(800px) rotateY(0);
+  }
+  70% {
+    -webkit-transform: perspective(800px) rotateY(200deg);
+    -moz-transform: perspective(800px) rotateY(200deg);
+    -ms-transform: perspective(800px) rotateY(200deg);
+    -o-transform: perspective(800px) rotateY(200deg);
+    transform: perspective(800px) rotateY(200deg);
+    /* this creates the bounce effect */
+  }
+  100% {
+    -webkit-transform: perspective(800px) rotateY(180deg);
+    -moz-transform: perspective(800px) rotateY(180deg);
+    -ms-transform: perspective(800px) rotateY(180deg);
+    -o-transform: perspective(800px) rotateY(180deg);
+    transform: perspective(800px) rotateY(180deg);
+  }
+}
+@-webkit-keyframes cd-rotate-inverse {
+  0% {
+    -webkit-transform: perspective(800px) rotateY(-180deg);
+  }
+  70% {
+    -webkit-transform: perspective(800px) rotateY(20deg);
+    /* this creates the bounce effect */
+  }
+  100% {
+    -webkit-transform: perspective(800px) rotateY(0);
+  }
+}
+@-moz-keyframes cd-rotate-inverse {
+  0% {
+    -moz-transform: perspective(800px) rotateY(-180deg);
+  }
+  70% {
+    -moz-transform: perspective(800px) rotateY(20deg);
+    /* this creates the bounce effect */
+  }
+  100% {
+    -moz-transform: perspective(800px) rotateY(0);
+  }
+}
+@keyframes cd-rotate-inverse {
+  0% {
+    -webkit-transform: perspective(800px) rotateY(-180deg);
+    -moz-transform: perspective(800px) rotateY(-180deg);
+    -ms-transform: perspective(800px) rotateY(-180deg);
+    -o-transform: perspective(800px) rotateY(-180deg);
+    transform: perspective(800px) rotateY(-180deg);
+  }
+  70% {
+    -webkit-transform: perspective(800px) rotateY(20deg);
+    -moz-transform: perspective(800px) rotateY(20deg);
+    -ms-transform: perspective(800px) rotateY(20deg);
+    -o-transform: perspective(800px) rotateY(20deg);
+    transform: perspective(800px) rotateY(20deg);
+    /* this creates the bounce effect */
+  }
+  100% {
+    -webkit-transform: perspective(800px) rotateY(0);
+    -moz-transform: perspective(800px) rotateY(0);
+    -ms-transform: perspective(800px) rotateY(0);
+    -o-transform: perspective(800px) rotateY(0);
+    transform: perspective(800px) rotateY(0);
+  }
+}
