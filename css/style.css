@@ -229,6 +229,10 @@ Projects
   -o-transform: translateZ(1px);
   transform: translateZ(1px);
 }
+.cd-projects-previews li:hover{
+ transform: scale(1.2);
+
+}
 .cd-projects-previews li.selected {
   opacity: 0;
   /* move selected project preview out of the viewport with no transition */
@@ -366,6 +370,7 @@ Projects
   height: 100vh;
 }
 
+
 .cd-projects-previews a,
 .cd-projects .preview-image {
   /* set a background image for each project */
@@ -409,6 +414,8 @@ Projects
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
 .cd-project-title::after {
   /* line below project title */
   content: '';
@@ -433,6 +440,7 @@ Projects
   -ms-transform: translateX(-50%) scale(1);
   -o-transform: translateX(-50%) scale(1);
   transform: translateX(-50%) scale(1);
+
 }
 .cd-projects .cd-project-title::after {
   -webkit-transform: translateX(-50%) scale(1);
