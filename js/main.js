@@ -205,7 +205,9 @@ jQuery(document).ready(function($){
     });
 
 });
+  /*
   $(document).ready(function(){
+  	// HIDE LOGO 
 
     // hide .navbar first
     $(".logo_mitte").hide();
@@ -226,7 +228,7 @@ jQuery(document).ready(function($){
         });
     });
 
-});
+});*/
   }(jQuery));
 
 (function ($) {
