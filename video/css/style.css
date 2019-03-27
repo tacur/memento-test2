@@ -36,6 +36,7 @@ General Style
   display: table;
   background: black;
   overflow: hidden;
+  animation: hideme 3s linear forwards;
 }
 
 .cd-intro-content {
@@ -100,10 +101,10 @@ General Style
 }
 .cd-btn.main-action {
 background-color: black;
-color: #d4af37;
+color: #FF6347;
 }
 .cd-btn.main-action:hover{
-  background-color: #d4af37;
+  background-color: #FF6347;
   color: black;
 }
 .cd-btn:hover{
@@ -880,6 +881,7 @@ Mask 2
   -moz-animation: cd-pulse 1.3s 0.3s both;
   animation: cd-pulse 1.3s 0.3s both;
 }
+
 .no-cssanimations .mask-2.cd-intro-content .content-wrapper::before {
   opacity: 0;
 }
@@ -1005,6 +1007,30 @@ Mask 2
     opacity: 0;
   }
   15.4%, 46.2%, 61.5%, 70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes hideme {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes hideme {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes hideme {
+  0%{
     opacity: 1;
   }
   100% {
