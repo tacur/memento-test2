@@ -61,7 +61,7 @@ Menu trigger
 
 -------------------------------- */
 .cd-nav-trigger {
-  position: absolute;
+  position: fixed;
   z-index: 4;
   top: 24px;
   right: 5%;
@@ -1594,6 +1594,7 @@ color: var(--secondary);
       color: #fff;
   }
   .navbar {
+      position: fixed;
       margin-bottom: 0;
       background-color: #424242;
       z-index: 9999;
