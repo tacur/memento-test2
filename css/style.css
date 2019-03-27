@@ -3059,3 +3059,12 @@ Parallax
         background-color: var(--third);
         color: var(--grundfarbe);
     }
+
+
+/* Gradient transparent - color - transparent */
+
+hr.style-two {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--grundfarbe), rgba(0, 0, 0, 0));
+}
