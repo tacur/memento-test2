@@ -3013,6 +3013,19 @@ Parallax
   right: -200%;
 
 }
+.btn_2 {
+  color: var(--third);
+  background-color: var(--grundfarbe);
+  position: absolute;
+  width: 90px;
+  height: 30px;
+  background: var(--grundfarbe);
+}
+.btn_2:hover{
+   color: var(--grundfarbe);
+  background-color: var(--third);
+}
+
 @keyframes aaa {
   0%{
     left: -110%;
