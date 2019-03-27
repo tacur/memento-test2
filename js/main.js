@@ -183,3 +183,87 @@ jQuery(document).ready(function($){
 		});
 	};
 })(jQuery);
+
+
+(function ($) {
+  $(document).ready(function(){
+
+    // hide .navbar first
+    $(".navbar1").hide();
+
+    // fade in .navbar
+    $(function () {
+        $(window).scroll(function () {
+
+                 // set distance user needs to scroll before we start fadeIn
+            if ($(this).scrollTop() > 40) {
+                $('.navbar1').fadeIn();
+            } else {
+                $('.navbar1').fadeOut();
+            }
+        });
+    });
+
+});
+  $(document).ready(function(){
+
+    // hide .navbar first
+    $(".logo_mitte").hide();
+
+    // fade in .navbar
+    $(function () {
+        $(window).scroll(function () {
+
+                 // set distance user needs to scroll before we start fadeIn
+            if ($(this).scrollTop() > 40) {
+                $('.logo_mitte').fadeIn();
+                $('.logo_links').fadeOut();
+            } else {
+            	$('.logo_links').fadeIn();
+                $('.logo_mitte').fadeOut();
+
+            }
+        });
+    });
+
+});
+  }(jQuery));
+
+(function ($) {
+$(document).ready(function(){
+	// Funktionen für das Scroll-Verhalten
+	$(function () {
+		$('.cd-nav-trigger').click(function () { // Klick auf den Button
+			$('body,html').animate({
+				scrollTop: 0
+			}, 800);
+			return false;
+		});
+	});
+	$(function () {
+		$('.back-to-top').click(function () { // Klick auf den Button
+			$('body,html').animate({
+				scrollTop: 0
+			}, 800);
+			return false;
+		});
+	});
+	$("#team").click(function() {
+    	$('html, body').animate({
+        	scrollTop: $("#team_1").offset().top
+    	}, 2000);
+	});
+	$("#anfahrt").click(function() {
+    	$('html, body').animate({
+        	scrollTop: $("#anfahrt_1").offset().top
+    	}, 2000);
+	});
+	$("#kontakt").click(function() {
+    	$('html, body').animate({
+        	scrollTop: $("#kontakt_1").offset().top
+    	}, 2000);
+	});
+
+});
+
+  }(jQuery));
