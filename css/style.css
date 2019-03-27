@@ -3019,7 +3019,7 @@ Parallax
   position: absolute;
   width: 90px;
   height: 30px;
-  background: var(--grundfarbe);
+  
 }
 .btn_2:hover{
    color: var(--grundfarbe);
