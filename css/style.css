@@ -37,6 +37,7 @@ h4 {
       margin-bottom: 30px;
   }  
 
+/* Dunkelrot
 :root {
   --grundfarbe: #B22222;  
   --secondary: black;
@@ -47,6 +48,19 @@ h4 {
   --feuerschatten: 0 0 20px #fefcc9, 10px -10px 30px #feec85,-20px -20px 40px #ffae34,20px -40px 50px #ec760c,-20px -60px 60px #cd4606, 0 -80px 70px #973716,
     10px -90px 80px #451b0e;
 }
+*/
+
+:root {
+  --grundfarbe: #8E793E;  
+  --secondary: #262423;
+  --third: white;
+  --grau: #231F20;
+  --schrift: "Unica One", Arial, Helvetica, sans-serif;
+  --schatten: black;
+  --feuerschatten: 0 0 20px #fefcc9, 10px -10px 30px #feec85,-20px -20px 40px #ffae34,20px -40px 50px #ec760c,-20px -60px 60px #cd4606, 0 -80px 70px #973716,
+    10px -90px 80px #451b0e;
+}
+
 /* -------------------------------- 
 
 Patterns - reusable parts of our design
@@ -482,7 +496,7 @@ Projects
   line-height: 1.5;
   font-weight: 700;
   /* text-shadow: 0 0 0.2em var(--third), 0 0 0.2em var(--third), var(--feuerschatten); */
-  text-shadow: 0 0 0.2em var(--third), 0 0 0.2em var(--third);
+  text-shadow: 0 0 0.2em var(--schatten), 0 0 0.2em var(--schatten);
   
 }
 @keyframes glow {
@@ -503,7 +517,7 @@ animation: glow 2s infinite alternate;
   line-height: 1.2;
   padding: .4em 2em;
   opacity: .8;
-  text-shadow: 0 0 0.2em var(--secondary), 0 0 0.2em var(--secondary), 0 0 0.2em var(--secondary), 0 0 0.2em var(--secondary), 0 0 0.2em var(--secondary);
+  text-shadow: 0 0 0.2em var(--schatten), 0 0 0.2em var(--schatten), 0 0 0.2em var(--schatten), 0 0 0.2em var(--schatten), 0 0 0.2em var(--schatten);
 }
 .cd-project-title p:hover{
 transform: scale(1.1);
