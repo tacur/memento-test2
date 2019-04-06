@@ -20,6 +20,19 @@
 		<div class="content-wrapper">
 			<div>
 				<h1><img src="img/logo.png" style="max-width: 100%; height: auto;"></h1>
+				<h4 class="countdown2">Countdown zur Neueröffnung:</h4>
+				<div class="row">
+					  <div class="col countdown1" id="cd1"></div>
+					  <div class="col countdown1" id="cd2"></div>
+					  <div class="col countdown1" id="cd3"></div>
+					  <div class="col countdown1" id="cd4"></div>
+				</div>
+				<div class="row">
+					  <div class="col" id="cd11"></div>
+					  <div class="col" id="cd22"></div>
+					  <div class="col" id="cd33"></div>
+					  <div class="col" id="cd44"></div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -561,10 +574,10 @@
 		<div class="col-sm-2 slideanim">
 			<div class="row">
 				<div class="col-sm-1 slideanim">
-					<a href="https://www.google.com/maps/dir/52.4826943,9.7332516/Schierholzstra%C3%9Fe+63,+30655+Hannover/@52.4453144,9.7818264,11z/data=!4m6!4m5!1m0!1m2!1m1!1s0x47b00c6094dd9dc9:0x7c17462981528df8!3e0"><i class="material-icons">directions</i></a>
+					<a href="https://www.google.de/maps/dir//Schierholzstra%C3%9Fe+65,+Hannover/@52.400018,9.8196354,16z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47b00c60c018ff4b:0x160f461fc59555cb!2m2!1d9.8240128!2d52.4000181!3e0"><i class="material-icons">directions</i></a>
 				</div>
 				<div class="col-sm-11 slideanim">
-						<p><a href="https://www.google.com/maps/dir/52.4826943,9.7332516/Schierholzstra%C3%9Fe+63,+30655+Hannover/@52.4453144,9.7818264,11z/data=!4m6!4m5!1m0!1m2!1m1!1s0x47b00c6094dd9dc9:0x7c17462981528df8!3e0">Schierholzstraße 63 <br> 30655 Hannover</a></p>
+						<p><a href="https://www.google.de/maps/dir//Schierholzstra%C3%9Fe+65,+Hannover/@52.400018,9.8196354,16z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47b00c60c018ff4b:0x160f461fc59555cb!2m2!1d9.8240128!2d52.4000181!3e0">Schierholzstraße 63 <br> 30655 Hannover</a></p>
 				</div>
 			</div>
 		</div>
@@ -630,7 +643,39 @@ $(document).ready(function(){
 })
 </script>
 <script>
+	var countDownDate = new Date("Jul 10, 2019 13:00:00").getTime();
 
+	// Update the count down every 1 second
+	var x = setInterval(function() {
+
+	  // Get todays date and time
+	  var now = new Date().getTime();
+	    
+	  // Find the distance between now and the count down date
+	  var distance = countDownDate - now;
+	    
+	  // Time calculations for days, hours, minutes and seconds
+	  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+	    
+	  // Output the result in an element with id="demo"
+	  document.getElementById("cd1").innerHTML = days;
+	  document.getElementById("cd2").innerHTML = hours;
+	  document.getElementById("cd3").innerHTML = minutes;
+	  document.getElementById("cd4").innerHTML = seconds;
+	  document.getElementById("cd11").innerHTML = "TAGE";
+	  document.getElementById("cd22").innerHTML = "STUNDEN";
+	  document.getElementById("cd33").innerHTML = "MINUTEN";
+	  document.getElementById("cd44").innerHTML = "SEKUNDEN";
+	  
+	  // If the count down is over, write some text 
+	  if (distance < 0) {
+	    clearInterval(x);
+	    document.getElementById("countdown1").innerHTML = "EXPIRED";
+	  }
+	}, 1000);
 </script>
 <button class="back-to-top" id="myBtn" title="Go to top"><i class="material-icons">vertical_align_top</i></button>
 </main>

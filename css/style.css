@@ -1715,7 +1715,7 @@ General Style
   background: black;
   background-repeat: no-repeat;
   overflow: hidden;
-  animation: hideme 3s linear forwards;
+  animation: hideme 5s linear forwards;
 }
 
 .cd-intro-content {
@@ -3109,4 +3109,17 @@ hr.style-two {
 a.links {
 
   color: var(--grundfarbe);
+}
+
+div.countdown1{
+  color: var(--grundfarbe);
+ text-align: center;
+  font-size: 40px;
+  margin-top: 0px;
+}
+h2.countdown2{
+  color: var(--grundfarbe);
+ text-align: center;
+  font-size: 10px;
+  margin-top: 0px;
 }
