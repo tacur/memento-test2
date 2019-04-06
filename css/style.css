@@ -3114,10 +3114,16 @@ a.links {
 div.countdown1{
   color: var(--grundfarbe);
  text-align: center;
-  font-size: 40px;
+  font-size: 50px;
   margin-top: 0px;
 }
-h2.countdown2{
+h4.countdown1{
+  color: var(--grundfarbe);
+ text-align: center;
+  font-size: 14px;
+  margin-top: 0px;
+}
+div.countdown2{
   color: var(--grundfarbe);
  text-align: center;
   font-size: 10px;
