@@ -266,10 +266,7 @@ Projects
   -o-transform: translateZ(1px);
   transform: translateZ(1px);
 }
-.cd-projects-previews li:hover{
- 
 
-}
 .cd-projects-previews li.selected {
   opacity: 0;
   /* move selected project preview out of the viewport with no transition */
@@ -410,6 +407,7 @@ Projects
 
 .cd-projects-previews a,
 .cd-projects .preview-image {
+  transition: transform .2s;
   /* set a background image for each project */
   background: #5b927d url(../img/zutaten2.jpg) no-repeat center center;
   background-size: cover;
@@ -417,6 +415,7 @@ Projects
 
 .cd-projects-previews li:nth-of-type(2) a,
 .cd-projects > li:nth-of-type(2) .preview-image {
+  transition: transform .2s;
   background: #a8ae7e url(../img/koch2.jpg) no-repeat center center;
   background-size: cover;
 }
@@ -424,14 +423,22 @@ Projects
 
 .cd-projects-previews li:nth-of-type(3) a,
 .cd-projects > li:nth-of-type(3) .preview-image {
+  transition: transform .2s;
   background: #e7d5a4 url(../img/service2.jpg) no-repeat center center;
   background-size: cover;
 }
 
 .cd-projects-previews li:nth-of-type(4) a,
 .cd-projects > li:nth-of-type(4) .preview-image {
+  transition: transform .2s;
   background: #835531 url(../img/leidenschaft1.jpg) no-repeat center center;
   background-size: cover;
+}
+
+.cd-projects-previews a:hover, .cd-projects-previews li:nth-of-type(2) a:hover, .cd-projects-previews li:nth-of-type(3) a:hover, .cd-projects-previews li:nth-of-type(4) a:hover {
+
+/*  Hover Bilder */
+
 }
 
 .cd-project-title {
@@ -3278,4 +3285,57 @@ Modal Window
   -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
   -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
   transition: opacity 0.3s 0s, visibility 0s 0s;
+}
+
+/*Cookie Consent Begin*/
+#cookieConsent {
+    background-color: rgba(20,20,20,0.8);
+    min-height: 26px;
+    font-size: 14px;
+    color: #ccc;
+    line-height: 26px;
+    padding: 8px 0 8px 30px;
+    font-family: "Trebuchet MS",Helvetica,sans-serif;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    z-index: 9999;
+}
+#cookieConsent a {
+    color: #4B8EE7;
+    text-decoration: none;
+}
+#closeCookieConsent {
+    float: right;
+    display: inline-block;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin: -15px 0 0 0;
+    font-weight: bold;
+}
+#closeCookieConsent:hover {
+    color: white;
+}
+#cookieConsent a.cookieConsentOK {
+    background-color: var(--grundfarbe);
+    color: #000;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0 20px;
+    cursor: pointer;
+    float: right;
+    margin: 0 60px 0 10px;
+}
+#cookieConsent a.cookieConsentOK:hover {
+    background-color: var(--grundfarbe);
+}
+/*Cookie Consent End*/
+
+div.hoverme:hover {
+
+  background: var(--grundfarbe)  ;
+
 }

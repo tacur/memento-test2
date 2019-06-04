@@ -11,10 +11,31 @@
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<!-- COOKIE 
+	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+		<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+		<script>
+		window.addEventListener("load", function(){
+		window.cookieconsent.initialise({
+		  "palette": {
+		    "popup": {
+		      "background": "#000"
+		    },
+		    "button": {
+		      "background": "#f1d600"
+		    }
+		  }
+		})});
+		</script>
+COOKIE -->
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
   	
 	<title>MEMENTO GRILL Restaurant</title>
 </head>
+			<div id="cookieConsent">
+			    <div id="closeCookieConsent">x</div>
+			    <b>Zustimmung zur Verwendung von Cookies.</b></br>Diese Website benutzt Cookies. <a href="#" target="_blank">Mehr Informationen</a>. <a class="cookieConsentOK">Zustimmen</a>
+			</div>
 <body id="top" class="cd-about">
 	<section class="cd-intro" style="position: fixed; z-index: 10;">
 	<div class="cd-intro-content mask-2">
@@ -53,10 +74,12 @@
 		<ul class="cd-projects-previews">
 			<li>
 				<a href="#0">
+					
 					<div class="cd-project-title">
 						<h2>SPEISEN & GETRÄNKE</h2>
 						<p>Regionale Lieferanten...</p>
 					</div>
+					
 				</a>
 			</li>
 			<li>
@@ -363,6 +386,17 @@ $(document).ready(function(){
 	    document.getElementById("countdown1").innerHTML = "EXPIRED";
 	  }
 	}, 1000);
+</script>
+
+<script type="text/javascript">
+	$(document).ready(function(){   
+    setTimeout(function () {
+        $("#cookieConsent").fadeIn(200);
+     }, 4000);
+    $("#closeCookieConsent, .cookieConsentOK").click(function() {
+        $("#cookieConsent").fadeOut(200);
+    }); 
+}); 
 </script>
 
 <button class="back-to-top" id="myBtn" title="Go to top"><i class="material-icons">vertical_align_top</i></button>
