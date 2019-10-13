@@ -49,13 +49,24 @@
 		</div>
 	</div>
 </section>
+
 	<main>
-		<nav class="navbar1"></nav>
-		<a href="index.html" ><img src="img/logo_neu_schatten.png" style="position: fixed; width: 150px; height: 60px; top: 0%; left: 0%; z-index: 4;"></a>
-		 
+		<nav class="navbar1"><a href="index.html" ><img src="img/logo_neu_schatten.png" style="position: fixed; width: 150px; height: 60px; top: 0%; left: 0%; z-index: 4;"></a>
+		</nav>
 		<a class="btn_telefon" href="tel:+51112345667" ><i class="material-icons">phone</i></a>
 		<a class="btn_whatsapp" href="tel:+51112345667" ><i class="fab fa-whatsapp"></i></a>
-		
+		<img src="img/logo_neu_schatten.png" style="position: absolute;display: block;margin-left: auto;margin-right: auto;width: 100%;max-width: 500px;height: auto;z-index: 2;top: 20%;right: 0px;left: 0px;"/>
+
+<div class="header-wrapper" >
+  <div class="zoominheader" >
+    <div class="zoomoutheader">
+    </div>
+  </div>
+</div>
+
+<section id="section10" class="demo">
+		<a href="#menu"><span></span></a>
+</section>
 
 <!-- /////// MENU  ///////////-->
 <div id="menu" class="container-fluid">
@@ -71,6 +82,11 @@
   	</div>
   </div>
 </div>
+<br>
+<br>
+<section id="section06" class="demo">
+		<a href="#social-media"><span></span></a>
+</section>
 
 <!-- /////// SOCIAL MEDIA  ///////////-->
 <hr class="style-two">
@@ -96,7 +112,10 @@
   	</div>
   </div>
 </div>
-
+<br>
+<section id="section06" class="demo">
+		<a href="#kontakt"><span></span></a>
+</section>
 <!-- /////////// 3D RESTAURANT ///////////
 <hr class="style-two">
 <div id="restaurant_3d" class="container-fluid">
@@ -143,6 +162,10 @@
   </div>
 </div>
 
+<br>
+<section id="section06" class="demo">
+		<a href="#anfahrt"><span></span></a>
+</section>
 <!-- ///////// ANFAHRT /////// -->
 <hr class="style-two">
 <div id="anfahrt" class="container-fluid">
@@ -418,7 +441,7 @@
 		  // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
 		  $('html, body').animate({
 			scrollTop: $(hash).offset().top
-		  }, 900, function(){
+		  }, 300, function(){
 	   
 			// Add hash (#) to URL when done scrolling (default click behavior)
 			window.location.hash = hash;
@@ -430,7 +453,7 @@
 		$(".slideanim").each(function(){
 		  var pos = $(this).offset().top;
 		  var winTop = $(window).scrollTop();
-			if (pos < winTop + 600) {
+			if (pos < winTop + 300) {
 			  $(this).addClass("slide");
 			}
 		});
