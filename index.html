@@ -12,6 +12,10 @@
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+	<script src="js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
+	<script src="js/jquery-2.1.1.js"></script>
+	<script src="js/velocity.min.js"></script>
+
   	
 	<title>MEMENTO GRILL Restaurant</title>
 </head>
@@ -48,150 +52,28 @@
 	<main>
 		<nav class="navbar1"></nav>
 		<a href="index.html" ><img src="img/logo_neu_schatten.png" style="position: fixed; width: 150px; height: 60px; top: 0%; left: 0%; z-index: 4;"></a>
-		<!--
-		<a href="tel:+51112345667" ><i class="material-icons" style="position: fixed;  font-size: 36px; top: 1%; left: 10%; z-index: 4;" >phone</i></a>
-		-->
-<div class="cd-about cd-main-content">
-	<a class="cd-nav-trigger cd-text-replace" href="#primary-nav"><span aria-hidden="true" class="cd-icon"></span></a>
+		 
+		<a class="btn_telefon" href="tel:+51112345667" ><i class="material-icons">phone</i></a>
+		<a class="btn_whatsapp" href="tel:+51112345667" ><i class="fab fa-whatsapp"></i></a>
+		
 
-	<a class="cd-nav-trigger cd-text-replace" href="#primary-nav">Menu<span aria-hidden="true" class="cd-icon"></span></a>
-	
-	<div class="cd-projects-container">
-		<ul class="cd-projects-previews">
-			<li>
-				<a href="#0">
-					
-					<div class="cd-project-title">
-						<h2>SPEISEN & GETRÄNKE</h2>
-						<p>Regionale Lieferanten...</p>
-					</div>
-					
-				</a>
-			</li>
-			<li>
-				<a href="#0">
-					<div class="cd-project-title">
-						<h2 >RESERVIERUNG</h2>
-						<p>Türkische/kurdische Hausmannskost...</p>
-					</div>
-				</a>
-			</li>
-			<li>
-				<a href="#0">
-					<div class="cd-project-title">
-						<h2>KONTAKT</h2>
-						<p>15 Jahre Gastronomie...</p>
-					</div>
-				</a>
-			</li>
-			<li>
-				<a href="#0">
-					<div class="cd-project-title">
-						<h2>DAS TEAM</h2>
-						<p>Eine Familie...</p>
-					</div>
-				</a>
-			</li>
-		</ul> 
-
-		<ul class="cd-projects">
-			<li>
-				<div class="preview-image">
-					<div class="cd-project-title">
-						<h2>Unsere Karte</h2>
-						<p>Von regionalen Lieferanten erhalten wir nur frische und bekannte Produkte.</p>
-					</div> 
-				</div>
-
-				<div class="cd-project-info">
-					<p>
-						Sunt quaerat natus cupiditate iure ipsa voluptatibus recusandae ratione vitae amet distinctio, voluptas, minus vero expedita ea fugit similique sit cumque ad id facere? Ab quas, odio neque quis ratione. Natus labore sit esse, porro placeat eum hic.
-					</p>
-				</div> 
-			</li>
-
-			<li>
-				<div class="preview-image">
-					<div class="cd-project-title">
-						<h2>Die Leidenschaft</h2>
-						<p>Unsere Köche sind mit ihren Rezepten aufgewachsen...</p>
-					</div> 
-				</div>
-
-				<div class="cd-project-info">
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, quod dicta aliquid nemo repellendus distinctio minus dolor aperiam suscipit, ea enim accusantium, deleniti qui sequi sint nihil modi amet eligendi, quidem animi error labore voluptatibus sed. Qui magnam labore, iusto nostrum. Praesentium non, impedit accusantium consequatur officia architecto, mollitia placeat aperiam tenetur pariatur voluptatibus corrupti vitae deserunt! Nostrum non mollitia deserunt ipsam. Sunt quaerat natus cupiditate iure ipsa voluptatibus recusandae ratione vitae amet distinctio, voluptas, minus vero expedita ea fugit similique sit cumque ad id facere? Ab quas, odio neque quis ratione. Natus labore sit esse, porro placeat eum hic.
-					</p>
-				</div> 
-			</li>
-
-			<li>
-				<div class="preview-image">
-					<div class="cd-project-title">
-						<h2>Der Service</h2>
-						<p>15 Jahre Erfahrung in der Gastromie hat Rezan...</p>
-					</div> 
-				</div>
-
-				<div class="cd-project-info">
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, quod dicta aliquid nemo repellendus distinctio minus dolor aperiam suscipit, ea enim accusantium, deleniti qui sequi sint nihil modi amet eligendi, quidem animi error labore voluptatibus sed. Qui magnam labore, iusto nostrum. Praesentium non, impedit accusantium consequatur officia architecto, mollitia placeat aperiam tenetur pariatur voluptatibus corrupti vitae deserunt! Nostrum non mollitia deserunt ipsam. Sunt quaerat natus cupiditate iure ipsa voluptatibus recusandae ratione vitae amet distinctio, voluptas, minus vero expedita ea fugit similique sit cumque ad id facere? Ab quas, odio neque quis ratione. Natus labore sit esse, porro placeat eum hic.
-					</p>
-				</div> 
-			</li>
-
-			<li>
-				<div class="preview-image">
-					<div class="cd-project-title">
-						<h2>Die Karte</h2>
-						<p>Hier findest du unsere Karte mit allen Zutaten und Preisen.</p>
-					</div> 
-				</div>
-
-				<div class="cd-project-info">
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, quod dicta aliquid nemo repellendus distinctio minus dolor aperiam suscipit, ea enim accusantium, deleniti qui sequi sint nihil modi amet eligendi, quidem animi error labore voluptatibus sed. Qui magnam labore, iusto nostrum. Praesentium non, impedit accusantium consequatur officia architecto, mollitia placeat aperiam tenetur pariatur voluptatibus corrupti vitae deserunt! Nostrum non mollitia deserunt ipsam. Sunt quaerat natus cupiditate iure ipsa voluptatibus recusandae ratione vitae amet distinctio, voluptas, minus vero expedita ea fugit similique sit cumque ad id facere? Ab quas, odio neque quis ratione. Natus labore sit esse, porro placeat eum hic.
-					</p>
-				</div> 
-			</li>
-		</ul>
-
-		<button class="scroll cd-text-replace">Scroll</button>
-
-	</div> <!-- .cd-project-container -->
-
-
-<!-- /////// NAVIGATION ///////////-->
-	<nav class="cd-primary-nav" id="primary-nav">
-		<ul>
-			<li class="cd-label">Navigation</li>
-			<!-- <li><a href="#0" data-toggle="modal" data-target="#team">Unser Team</a></li> -->
-			<!--
-			<li><button type="button" class="btn btn-modal" data-toggle="modal" data-target="#team">Unser Team</button></li>
-			<li><button type="button" class="btn btn-modal" data-toggle="modal" data-target="#karte">Unsere Karte</button></li>
-			<li><button type="button" class="btn btn-modal" data-toggle="modal" data-target="#anfahrt">Anfahrt</button></li>			
-			<li><button type="button" class="btn btn-modal" data-toggle="modal" data-target="#reservierung">Reservierung</button></li>
-			<li><button type="button" class="btn btn-modal" data-toggle="modal" data-target="#kontakt">Kontakt</button></li>
-			-->
-			<li><button type="button" class="btn btn-modal" id="team">Unser Team</button></li>
-			<li><button type="button" class="btn btn-modal" id="kontakt">Kontakt</button></li>
-			<li><button type="button" class="btn btn-modal" id="anfahrt">Anfahrt</button></li>	
-			<!--
-			<li><button type="button" class="btn btn-modal" id="#impressum">Impressum</button></li>	
-			<li><button type="button" class="btn btn-modal" id="#datenschutzerklärung">Datenschutzerklärung</button></li>
-			-->	
-		</ul>
-	</nav> <!-- .cd-primary-nav -->
-	<script src="js/modernizr-custom.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-						<script>
-							if( !window.jQuery ) document.write('<script src="js/jquery-3.0.0.min.js"><\/script>');
-						</script>
-<script src="js/main_bilder.js"></script> 
-</div> <!-- cd-about -->
-
+<!-- /////// MENU  ///////////-->
+<div id="menu" class="container-fluid">
+	<h4 class="slideanim">Unser Menu</h4>
+	<div class="middle">
+	<div class="col-sm-12 slideanim">
+		<a class="btn_menu" href="#"><h3>Mittagskarte</h3>
+	      </a>
+	      <a class="btn_menu" href="#"><h3>Speisekarte</h3>
+	      </a>
+	      <a class="btn_menu" href="#"><h3>Getränkekarte</h3>
+	      </a>
+  	</div>
+  </div>
+</div>
 
 <!-- /////// SOCIAL MEDIA  ///////////-->
+<hr class="style-two">
 <div id="social-media" class="container-fluid">
 	<h4 class="slideanim">SOZIALE MEDIEN</h4>
 	<div class="middle">
@@ -215,7 +97,6 @@
   </div>
 </div>
 
-
 <!-- /////////// 3D RESTAURANT ///////////
 <hr class="style-two">
 <div id="restaurant_3d" class="container-fluid">
@@ -229,19 +110,20 @@
   </div>
 </div>
 -->
+
 <!-- ///////// RESERVIERUNG /////// -->
 <hr class="style-two">
-<div id="kontakt_1" class="container-fluid">
-  <h4 class="slideanim">RESERVIERUNG/KONTAKT</h4>
+<div id="kontakt" class="container-fluid">
+  <h4 class="slideanim">RESERVIERUNG/ KONTAKT</h4>
   <div class="row">
     <div class="col-sm-5 slideanim">
       <h5>Kontaktieren Sie uns per Telefon oder E-Mail.</h5>
-      <p> </p>
-      <p><a href="tel:+49 511 12345678"><i class="material-icons">phone</i> +49 511 12345678</a></p>
-      <p><a href="mailto:info@memento-hannover.de"><i class="material-icons">email</i> info@memento-grill.de</a></p>
-      <p>  </p>
-    </div>
+	  <p><a class="btn_s" href="tel:+49 511 12345678"><i class="material-icons">phone</i></a><h3> +49 511 12345678</h3></p>
+	  <br>
+      <p><a class="btn_s" href="mailto:info@memento-hannover.de"><i class="material-icons">email</i> </a><h3>info@memento-grill.de</h3></p>
+	</div>
     <div class="col-sm-7 slideanim">
+			<br>
     	<h5 class="slideanim">Gerne können Sie auch unser Kontaktformular nutzen.</h5>
       <div class="row">
         <div class="col-sm-6 form-group">
@@ -254,7 +136,7 @@
       <textarea class="form-control" id="comments" name="comments" placeholder="Textinhalt" style="font-size: 12px;" rows="5"></textarea><br>
       <div class="row">
         <div class="col-sm-12 form-group">
-          <button class="btn_2 " type="submit">absenden</button>
+          <button class="btn_menu" type="submit"><h3>absenden</h3></button>
         </div>
       </div>
     </div>
@@ -263,38 +145,20 @@
 
 <!-- ///////// ANFAHRT /////// -->
 <hr class="style-two">
-<div id="anfahrt_1" class="container-fluid">
+<div id="anfahrt" class="container-fluid">
 	<h4 class="slideanim slide">Anfahrt</h4>
 	<div class="row">
 		<div class="col-sm-2 slideanim">
-			<div class="row">
-				<div class="col-sm-1 slideanim">
-					<a href="https://www.google.de/maps/dir//Schierholzstra%C3%9Fe+65,+Hannover/@52.400018,9.8196354,16z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47b00c60c018ff4b:0x160f461fc59555cb!2m2!1d9.8240128!2d52.4000181!3e0"><i class="material-icons">directions</i></a>
-				</div>
-				<div class="col-sm-11 slideanim">
-						<p><a href="https://www.google.de/maps/dir//Schierholzstra%C3%9Fe+65,+Hannover/@52.400018,9.8196354,16z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47b00c60c018ff4b:0x160f461fc59555cb!2m2!1d9.8240128!2d52.4000181!3e0">Schierholzstraße 63 <br> 30655 Hannover</a></p>
-				</div>
-			</div>
+					<a class="btn_s" href="https://www.google.de/maps/dir//Schierholzstra%C3%9Fe+65,+Hannover/@52.400018,9.8196354,16z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47b00c60c018ff4b:0x160f461fc59555cb!2m2!1d9.8240128!2d52.4000181!3e0"><i class="material-icons" size="large" >directions</i></a>
 		</div>
 		<div class="col-sm-10 slideanim">	
-			<div id="googleMap" style="width:100%;height:400px;"></div>
+			<a class="navi" href="https://www.google.de/maps/dir//Schierholzstra%C3%9Fe+65,+Hannover/@52.400018,9.8196354,16z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47b00c60c018ff4b:0x160f461fc59555cb!2m2!1d9.8240128!2d52.4000181!3e0">Schierholzstraße 63 <br> 30655 Hannover</a>
 		</div>
 	</div>
 </div>
-<hr class="style-two">
-			<script>
-			function myMap() {
-			var mapProp= {
-			    center:new google.maps.LatLng(52.4000601 , 9.8214511),
-			    zoom:15,
-			};
-			var map= new google.maps.Map(document.getElementById("googleMap"), mapProp);
-			}
-			</script>
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXkNRS1dfFUKOW76qeCUujcyr2ya7Qs98&center=52.39997426301596,9.8233802079345&zoom=16&format=png&maptype=roadmap&style=color:0x800000%7Csaturation:60%7Clightness:60%7Cvisibility:on%7Cweight:2&style=element:geometry%7Ccolor:0x212121&style=element:labels.icon%7Cvisibility:off&style=element:labels.text%7Ccolor:0x800000%7Cvisibility:on%7Cweight:3&style=element:labels.text.fill%7Ccolor:0x800000%7Csaturation:100%7Clightness:100%7Cweight:7&style=element:labels.text.stroke%7Ccolor:0x800000&style=feature:administrative%7Celement:geometry%7Ccolor:0x757575%7Cvisibility:off&style=feature:administrative.country%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&style=feature:administrative.locality%7Celement:labels.text.fill%7Ccolor:0xbdbdbd&style=feature:poi%7Cvisibility:off&style=feature:poi%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:poi.park%7Celement:geometry%7Ccolor:0x181818&style=feature:poi.park%7Celement:labels.text.fill%7Ccolor:0x616161&style=feature:poi.park%7Celement:labels.text.stroke%7Ccolor:0x1b1b1b&style=feature:road%7Celement:geometry.fill%7Ccolor:0x2c2c2c&style=feature:road%7Celement:labels.icon%7Cvisibility:off&style=feature:road%7Celement:labels.text.fill%7Ccolor:0x8a8a8a&style=feature:road.arterial%7Celement:geometry%7Ccolor:0x373737&style=feature:road.highway%7Celement:geometry%7Ccolor:0x3c3c3c&style=feature:road.highway.controlled_access%7Celement:geometry%7Ccolor:0x4e4e4e&style=feature:road.local%7Celement:labels.text.fill%7Ccolor:0x616161&style=feature:transit%7Cvisibility:off&style=feature:transit%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:water%7Celement:geometry%7Ccolor:0x000000&style=feature:water%7Celement:labels.text.fill%7Ccolor:0x3d3d3d&size=480x360&callback=myMap"></script>
 
 <!--///////// FOOTER ///////////-->
+<hr class="style-two">
 <footer class="container-fluid text-center">
   <p><a href="#0" class="links" id="modal-trigger" data-type="cd-modal-trigger">Datenschutzerklärung</a></p>
   <p><a href="#myModal" class="links" id="modal-trigger2" data-toggle="modal">Impressum</a></p>
@@ -302,10 +166,7 @@
   <p>Copyright © 2019 <a href="#" title="Memento Grill GmbH">Memento Grill GmbH</a>. </br>Alle Rechte vorbehalten.</p>
 </footer>
 
-
-
-
-
+<!-- /////// NAVIGATE TOP BUTTON /////-->
 <button class="back-to-top" id="myBtn" title="Go to top"><i class="material-icons">vertical_align_top</i></button>
 </main>
 
@@ -313,12 +174,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="js/jquery-2.1.1.js"></script>
-<script src="js/snap.svg-min.js"></script>
-<script src="js/main_karte.js"></script> 
+<script src="js/snap.svg-min.js"></script> 
 <script src="js/main.js"></script> <!-- Resource jQuery -->
 
 </body>
 </html>
+
 
 
 
@@ -435,7 +296,7 @@
 		<a href="#0" class="modal-close">Close</a>
 	</div> <!-- cd-modal -->
 
-	<!-- ////////// Modal Impressum ///////// -->
+	<!-- ////////// Modal IMPRESSUM ///////// -->
 	<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
 			<div class="modal-dialog modal-full" role="document">
 				<div class="modal-content">
@@ -453,7 +314,7 @@
 		</div>
 
 <!-- ////////// Modal Kontakt ///////// -->
-		<div class="modal" id="kontakt">
+		<div class="modal" id="kontakt_modal">
 		    <div class="modal-dialog">
 		      <div class="modal-content">
 		        <!-- Modal Header -->
@@ -475,7 +336,7 @@
 		  </div>
 
 <!-- ////////// Modal Reservierung ///////// -->
-			<div class="modal" id="reservierung">
+			<div class="modal" id="reservierung_modal">
 			    <div class="modal-dialog">
 			      <div class="modal-content">
 			        <!-- Modal Header -->
@@ -496,133 +357,9 @@
 			    </div>
 			  </div>
 
-<!-- ////////// TEAM ///////// -->
-			<div class="modal fade" id="team">
-			    <div class="modal-dialog modal-dialog-centered modal-lg">
-			      <div class="modal-content">
-			        <!-- Modal Header -->
-			        <div class="modal-header" >
-			          <h1 class="modal-title">Unser Team</h1>
-			          <button type="button" class="close" data-dismiss="modal"><img src="img/cd-icon-close.svg"></button>
-			        </div>
-			        <!-- Modal body -->
-			        <div class="modal-body" >
-							<div class="cd-svg-clipped-slider" data-selected="M780,0H20C8.954,0,0,8.954,0,20v760c0,11.046,8.954,20,20,20h760c11.046,0,20-8.954,20-20V20
-										C800,8.954,791.046,0,780,0z" data-lateral="M795.796,389.851L410.149,4.204c-5.605-5.605-14.692-5.605-20.297,0L4.204,389.851
-										c-5.605,5.605-5.605,14.692,0,20.297l385.648,385.648c5.605,5.605,14.692,5.605,20.297,0l385.648-385.648
-										C801.401,404.544,801.401,395.456,795.796,389.851z">
-											<div class="gallery-wrapper">
-												<ul class="gallery">
-													<li class="left">
-														<div class="svg-wrapper">
-															<svg viewBox="0 0 800 800">
-																<title>Rezan</title>
-																<defs>
-																	<clipPath id="cd-image-1">
-																		<path id="cd-morphing-path-1" d="M795.796,389.851L410.149,4.204c-5.605-5.605-14.692-5.605-20.297,0L4.204,389.851 c-5.605,5.605-5.605,14.692,0,20.297l385.648,385.648c5.605,5.605,14.692,5.605,20.297,0l385.648-385.648 C801.401,404.544,801.401,395.456,795.796,389.851z"/>
-																	</clipPath>
-																</defs>
-																
-																<image height='800px' width="800px" clip-path="url(#cd-image-1)" xlink:href="img/img-01.jpg"></image>
-																<use xlink:href="#cd-morphing-path-1" class="cover-layer" />
-															</svg>
-														</div> <!-- .svg-wrapper -->
-													</li>
-													<li class="selected">
-														<div class="svg-wrapper">
-															<svg viewBox="0 0 800 800">
-																<title>Roya</title>
-																<defs>
-																	<clipPath id="cd-image-2">
-																		<path id="cd-morphing-path-2" d="M780,0H20C8.954,0,0,8.954,0,20v760c0,11.046,8.954,20,20,20h760c11.046,0,20-8.954,20-20V20 C800,8.954,791.046,0,780,0z"/>
-																	</clipPath>
-																</defs>
-																
-																<image height='800px' width="800px" clip-path="url(#cd-image-2)" xlink:href="img/img-02.jpg"></image>
-																<use xlink:href="#cd-morphing-path-2" class="cover-layer" />
-															</svg>
-														</div> <!-- .svg-wrapper -->
-													</li>
-													<li class="right">
-														<div class="svg-wrapper">
-															<svg viewBox="0 0 800 800">
-																<title>Memo</title>
-																<defs>
-																	<clipPath id="cd-image-3">
-																		<path id="cd-morphing-path-3" d="M795.796,389.851L410.149,4.204c-5.605-5.605-14.692-5.605-20.297,0L4.204,389.851 c-5.605,5.605-5.605,14.692,0,20.297l385.648,385.648c5.605,5.605,14.692,5.605,20.297,0l385.648-385.648 C801.401,404.544,801.401,395.456,795.796,389.851z"/>
-																	</clipPath>
-																</defs>
-																
-																<image height='800px' width="800px" clip-path="url(#cd-image-3)" xlink:href="img/img-03.jpg"></image>
-																<use xlink:href="#cd-morphing-path-3" class="cover-layer" />
-															</svg>
-														</div> <!-- .svg-wrapper -->
-													</li>
-													<li>
-														<div class="svg-wrapper">
-															<svg viewBox="0 0 800 800">
-																<title>Asmin</title>
-																<defs>
-																	<clipPath id="cd-image-4">
-																		<path id="cd-morphing-path-4" d="M795.796,389.851L410.149,4.204c-5.605-5.605-14.692-5.605-20.297,0L4.204,389.851 c-5.605,5.605-5.605,14.692,0,20.297l385.648,385.648c5.605,5.605,14.692,5.605,20.297,0l385.648-385.648 C801.401,404.544,801.401,395.456,795.796,389.851z"/>
-																	</clipPath>
-																</defs>
-																
-																<image height='800px' width="800px" clip-path="url(#cd-image-4)" xlink:href="img/img-04.jpg"></image>
-																<use xlink:href="#cd-morphing-path-4" class="cover-layer" />
-															</svg>
-														</div> <!-- .svg-wrapper -->
-													</li>
-													<li>
-														<div class="svg-wrapper">
-															<svg viewBox="0 0 800 800">
-																<title>Fortnite</title>
-																<defs>
-																	<clipPath id="cd-image-5">
-																		<path id="cd-morphing-path-5" d="M795.796,389.851L410.149,4.204c-5.605-5.605-14.692-5.605-20.297,0L4.204,389.851 c-5.605,5.605-5.605,14.692,0,20.297l385.648,385.648c5.605,5.605,14.692,5.605,20.297,0l385.648-385.648 C801.401,404.544,801.401,395.456,795.796,389.851z"/>
-																	</clipPath>
-																</defs>
-																
-																<image height='800px' width="800px" clip-path="url(#cd-image-5)" xlink:href="img/img-05.jpg"></image>
-																<use xlink:href="#cd-morphing-path-5" class="cover-layer" />
-															</svg>
-														</div> <!-- .svg-wrapper -->
-													</li>
-												</ul>
-												<nav>
-													<ul class="navigation">
-														<li><a href="#0" class="prev">Prev</a></li>
-														<li><a href="#0" class="next">Next</a></li>
-													</ul>
-												</nav>
-											</div> <!-- .gallery-wrapper -->
-
-											<ul class="caption">
-												<li class="left">Fehime</li>
-												<li class="selected">Rezan</li>
-												<li class="right">Roya</li>
-												<li>Memo</li>
-												<li>Asmin</li>
-											</ul>
-										</div> <!-- .cd-svg-clipped-slider -->
-									<script src="js/modernizr-custom.js"></script>
-									<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-									<script>
-										if( !window.jQuery ) document.write('<script src="js/jquery-3.0.0.min.js"><\/script>');
-									</script>
-									<script src="js/snap.svg-min.js"></script>
-									<script src="js/main_bilder.js"></script> <!-- Resource jQuery -->
-			        </div>
-			        <!-- Modal footer -->
-			        <div class="modal-footer">
-			          <button type="button" class="btn" style="background-color: white; color: #FF6347;" data-dismiss="modal">Schließen</button>
-			        </div>
-			      </div>
-			    </div>
-			  </div>
 
 <!-- ////////// Modal Anfahrt ///////// -->
-			<div class="modal" id="anfahrt">
+			<div class="modal" id="anfahrt_modal">
 			    <div class="modal-dialog">
 			      <div class="modal-content">
 			        <!-- Modal Header -->
@@ -644,7 +381,7 @@
 			  </div>
 
 <!-- ////////// Modal Karte ///////// -->
-			<div class="modal fade" id="karte">
+			<div class="modal fade" id="karte_modal">
 			    <div class="modal-dialog modal-lg">
 			      <div class="modal-content">
 			        <!-- Modal Header -->
@@ -667,6 +404,7 @@
 
 <!--///////// SCRIPTE ///////////-->
 <script>
+	// ##### NAVIGATE TOP BUTTON ######
 	$(document).ready(function(){
 	  // Add smooth scrolling to all links in navbar + footer link
 	  $(".navbar a, footer a[href='#top']").on('click', function(event) {
@@ -698,10 +436,11 @@
 		});
 	  });
 	})
-	</script>
+</script>
 	
 	
 	<script type="text/javascript">
+	//#### COOKIE Meldung ######
 		$(document).ready(function(){   
 		setTimeout(function () {
 			$("#cookieConsent").fadeIn(200);
@@ -712,7 +451,7 @@
 	}); 
 	</script>
 			  <script>
-				  /*
+				  /* COUNTDOWN IM INTRO
 				var countDownDate = new Date("Jul 10, 2019 13:00:00").getTime();
 			
 				// Update the count down every 1 second
