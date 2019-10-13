@@ -92,7 +92,7 @@ Patterns - reusable parts of our design
   width: 100%;
   height: 100%;
   text-align:center;
-  background: url("/img/barbecue2.jpeg") center center no-repeat;
+  background: url("img/barbecue2.jpeg") center center no-repeat;
   position: relative;
   -webkit-user-select: none;
   -moz-user-select: none;
