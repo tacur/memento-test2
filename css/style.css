@@ -1022,12 +1022,12 @@ color: var(--secondary);
       margin-bottom: 20px;
       color: #424242;
   }
-  .slideanim {visibility:visible;}
+  .slideanim {visibility:hidden;}
   .slide {
-      animation-name: slide;
-      -webkit-animation-name: slide;
-      animation-duration: 1s;
-      -webkit-animation-duration: 1s;
+      animation-name: slide, scale;
+      -webkit-animation-name: slide, scale;
+      animation-duration: 2s;
+      -webkit-animation-duration: 2s;
       visibility: visible;
   }
   @keyframes slide {
@@ -1047,7 +1047,27 @@ color: var(--secondary);
     } 
     100% {
       opacity: 1;
-      -webkit-transform: translateY(0%);
+      -webkit-transform: translateY(70%);
+    }
+  }
+  @keyframes scale {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    } 
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  @-webkit-keyframes scale {
+    0% {
+      opacity: 0;
+      -webkit-transform: scale(0.5);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: scale(1);
     }
   }
   @media screen and (max-width: 768px) {
