@@ -1022,7 +1022,7 @@ color: var(--secondary);
       margin-bottom: 20px;
       color: #424242;
   }
-  .slideanim {visibility:hidden;}
+  .slideanim {visibility:visible;}
   .slide {
       animation-name: slide;
       -webkit-animation-name: slide;
