@@ -990,7 +990,7 @@ color: var(--secondary);
       background-color: white !important;
   }
   .panel-footer h3 {
-      font-size: 32px;ew
+      font-size: 32px;
       color: #aaa;
       font-size: 14px;
   }
@@ -2394,7 +2394,7 @@ Parallax
   margin-top: auto;
   border-radius: 0%;
   color: var(--grundfarbe);
-  box-shadow: 5px 5px 200px 0px var(--grundfarbe);
+  box-shadow: 5px 5px 20px 0px var(--grundfarbe);
   overflow: hidden;
   position: relative;
   text-align: center;
@@ -2442,7 +2442,7 @@ Parallax
   margin: 10px;
   margin-top: auto;
   border-radius: 30%;
-  box-shadow: 5px 5px 200px 0px var(--grundfarbe);
+  box-shadow: 5px 5px 20px 0px var(--grundfarbe);
   color: var(--grundfarbe);
   overflow: hidden;
   position: relative;
