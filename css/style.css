@@ -474,8 +474,8 @@ direction: ltr;
 .modal-title{
   text-align: right;
   font-family: var(--schrift);
-  font-size: 16px;
-  color: white; 
+  font-size: 30px;
+  color: var(--grundfarbe); 
   text-shadow: black 0.1em 0.1em 0.2em;
 }
 
@@ -889,17 +889,23 @@ xkeyframes
 
 .modal-header {
 
-background-color: var(--grundfarbe); 
-color: var(--secondary);
+background-color: var(--secondary); 
+color: var(--grundfarbe);
 }
 
 .modal-body{
-background-color: var(--grundfarbe); 
-color: var(--secondary);
+background-color: var(--secondary); 
+color: var(--grundfarbe);
+}
+.p {
+  color: var(--grundfarbe);
+  line-height: 1.6;
+  margin: 2em 0;
+  font-size: 2.4rem;
 }
 .modal-footer{
-  background-color: var(--grundfarbe); 
-  color: var(--secondary);
+  background-color: var(--secondary); 
+  color: var(--grundfarbe);
 }
 
 /*  //////////////////////////////////////////// */
@@ -2724,128 +2730,6 @@ Modal Window
   }
 }
 
-/* -------------------------------- 
-
-Modal Window
-
--------------------------------- */
-.cd-modal1 {
-  position: fixed;
-  z-index: 15;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  visibility: hidden;
-  -webkit-transition: visibility 0s 0.6s;
-  -moz-transition: visibility 0s 0.6s;
-  transition: visibility 0s 0.6s;
-}
-.cd-modal1 svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.cd-modal1 svg > path {
-  fill: var(--secondary);
-}
-.cd-modal1 .modal-close1 {
-  /* 'X' icon */
-  position: absolute;
-  z-index: 1;
-  top: 20px;
-  right: 5%;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.3) url(../img/cd-icon-close.svg) no-repeat center center;
-  /* image replacement */
-  overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap;
-  /* Force hardware acceleration*/
-  -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  -o-transform: scale(0);
-  transform: scale(0);
-  -webkit-transition: -webkit-transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s;
-  -moz-transition: -moz-transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s;
-  transition: transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s;
-}
-.no-touch .cd-modal1 .modal-close1:hover {
-  background-color: var(--grundfarbe);
-}
-.cd-modal1.modal-is-visible1 {
-  visibility: visible;
-  -webkit-transition: visibility 0s 0s;
-  -moz-transition: visibility 0s 0s;
-  transition: visibility 0s 0s;
-}
-.cd-modal1.modal-is-visible1 .modal-close1 {
-  visibility: visible;
-  opacity: 1;
-  -webkit-transition: -webkit-transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;
-  -moz-transition: -moz-transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;
-  transition: transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-  transform: scale(1);
-}
-
-.cd-modal-content1 {
-  position: relative;
-  height: 100vh;
-  overflow-y: auto;
-  padding: 3em 5% 4em;
-  opacity: 0;
-  -webkit-transform: translateY(50px);
-  -moz-transform: translateY(50px);
-  -ms-transform: translateY(50px);
-  -o-transform: translateY(50px);
-  transform: translateY(50px);
-  -webkit-transition: opacity 0.3s 0s, -webkit-transform 0.3s 0s;
-  -moz-transition: opacity 0.3s 0s, -moz-transform 0.3s 0s;
-  transition: opacity 0.3s 0s, transform 0.3s 0s;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.cd-modal-content1 p {
-  color: var(--grundfarbe);
-  line-height: 1.6;
-  margin: 2em 0;
-}
-.modal-is-visible1 .cd-modal-content1 {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  -o-transform: translateY(0);
-  transform: translateY(0);
-  -webkit-overflow-scrolling: touch;
-  -webkit-transition: opacity 0.3s 0.3s, -webkit-transform 0.3s 0.3s;
-  -moz-transition: opacity 0.3s 0.3s, -moz-transform 0.3s 0.3s;
-  transition: opacity 0.3s 0.3s, transform 0.3s 0.3s;
-}
-@media only screen and (min-width: 768px) {
-  .cd-modal-content1 {
-    padding: 3em 10% 4em;
-  }
-  .cd-modal-content1 p {
-    font-size: 2.4rem;
-  }
-}
 
 /* -------------------------------- 
 
