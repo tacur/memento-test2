@@ -2400,7 +2400,6 @@ Parallax
   margin-top: auto;
   border-radius: 0%;
   color: var(--grundfarbe);
-  box-shadow: 5px 5px 20px 0px var(--grundfarbe);
   overflow: hidden;
   position: relative;
   text-align: center;
@@ -2448,7 +2447,6 @@ Parallax
   margin: 10px;
   margin-top: auto;
   border-radius: 30%;
-  box-shadow: 5px 5px 20px 0px var(--grundfarbe);
   color: var(--grundfarbe);
   overflow: hidden;
   position: relative;
