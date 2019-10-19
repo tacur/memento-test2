@@ -2628,7 +2628,7 @@ hr.style-two {
     background: var(--secondary);
     text-transform: uppercase;
     font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     flex-direction: column;
     clip-path: circle(100px at 90% -20%);
