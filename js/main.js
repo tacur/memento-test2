@@ -440,3 +440,17 @@ jQuery(document).ready(function($){
 		new svgClippedSlider($(this));
 	});
 });
+
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+const links = document.querySelectorAll('.nav-links li');
+
+hamburger.addEventListener("click",  () => {
+	navLinks.classList.toggle("open");
+	
+});
+
+navLinks.addEventListener("click",  () => {
+	navLinks.classList.toggle("open");
+	
+});
