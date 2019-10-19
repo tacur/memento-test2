@@ -2612,7 +2612,7 @@ hr.style-two {
 
   .nav {
     position: relative;
-    z-index: 14;
+    z-index: 4;
   }
   .hamburger {
     position: fixed;
@@ -2634,7 +2634,7 @@ hr.style-two {
     clip-path: circle(100px at 90% -20%);
     -webkit-clip-path: circle(100px at 90% -20%);
     transition: all 1s ease-out ;
-    z-index: 14;
+    z-index: 4;
   }
   .li{
     top: 10%;
