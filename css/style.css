@@ -472,7 +472,6 @@ direction: ltr;
 }
 
 .modal-title{
-  text-align: right;
   font-family: var(--schrift);
   font-size: 30px;
   color: var(--grundfarbe); 
