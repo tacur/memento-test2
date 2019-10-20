@@ -17,7 +17,7 @@ body {
   font-size: 1.6rem;
   font-family: var(--schrift);
   color: #ffffff;
-  background-color: var(--grau);
+  background-color: var(--secondary);
 }
 
 a {
@@ -2391,6 +2391,55 @@ Parallax
 
 }
 
+.btn_nav{
+  display: inline-block;
+  width: auto;
+  height: 60px;
+  background: var(--secondary);
+  margin: auto;
+  margin-top: auto;
+  border-radius: 0%;
+  color: var(--secondary);
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  text-decoration-line: none;
+}
+
+.btn_nav h3{
+  font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+  text-transform: uppercase;
+  line-height: 60px;
+  font-size: 20px;
+  transition: 0.2s linear;
+  text-decoration-line: none;
+}
+.btn_nav:hover h3{
+  font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+  text-transform: uppercase;
+  transform: rotate(360deg);
+  transform: scale(1.1);
+  color:white;
+  text-decoration-line: none;
+}
+.btn_nav::before{
+  content: "";
+  position: absolute;
+  width: 165%;
+  height: 300%;
+  background: var(--grundfarbe);
+  transform: rotate(45deg);
+  left: -150%;
+  top: 120%;
+  text-decoration-line: none;
+}
+.btn_nav:hover::before{
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+  text-decoration-line: none;
+}
+
 .btn_menu{
   display: inline-block;
   width: 250px;
@@ -2582,13 +2631,15 @@ hr.style-two {
   }
 
   .navbar2 {
-    height: 10vh;
+    height: 60px;
     background: var(--secondary);
+    width:100%; 
+    margin-left: auto;
     }
     .nav-links{
       display:flex;
       list-style: none;
-      width: 100%;
+      width: 80%;
       justify-content: space-around;
       align-items: center;
       margin-left: auto;
