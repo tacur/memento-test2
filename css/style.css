@@ -2651,7 +2651,7 @@ hr.style-two {
       font-size: 16px;
     }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 900px){
 
   .line {
     width: 30px;
