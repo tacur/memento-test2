@@ -914,20 +914,6 @@ color: var(--grundfarbe);
 /*  //////////////////////////////////////////// */
 
 
-  .jumbotron {
-      /*background-color: #424242;
-    
-    */
-    color: #fff;
-      padding: 100px 25px;
-      font-family: var(--schrift);
-    background: url('img/stock3.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-   -moz-background-size: cover;
-   background-size: cover;
-   -o-background-size: cover;
-       
-  }
   .container-fluid {
       padding: 120px 50px 120px 50px;
   }
